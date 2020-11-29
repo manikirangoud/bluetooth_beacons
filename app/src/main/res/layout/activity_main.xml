@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:id="@+id/rv_paired_devices"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_height="wrap_content">
+
+            <com.pam.tools.customviews.UbuntuTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:maxLines="3"
+                android:textColor="@color/colorAccent"
+                android:layout_height="wrap_content"
+                android:text="@string/file_path"
+                android:padding="8dp" />
+
+
+            <com.pam.tools.customviews.UbuntuButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_file"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:foreground="?attr/selectableItemBackground"
+                android:id="@+id/ubtn_open_file"
+                android:background="@drawable/button_background"
+                android:textColor="@color/colorAccent"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <com.pam.tools.customviews.UbuntuButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/stop_scan"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:id="@+id/btn_control_scan"
+                android:background="@drawable/button_background"
+                android:textColor="@color/colorAccent"
+                android:layout_margin="16dp"
+                android:padding="8dp" />
+
+            <com.pam.tools.customviews.UbuntuButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/export_to_file"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:textStyle="bold"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:id="@+id/btn_export_to_file"
+                android:background="@drawable/button_background"
+                android:textColor="@color/colorAccent"
+                android:layout_margin="16dp"
+                android:padding="8dp" />
+
+        </TableRow>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/progress_bar"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

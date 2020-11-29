@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Bluetooth Beacons</string>
+    <string name="file_path">File Path: Home/BluetoothBeacons/DeviceData.xls</string>
+    <string name="open_file">Open File</string>
+    <string name="export_to_file">Export to file</string>
+    <string name="stop_scan">Stop Scan</string>
+</resources>
